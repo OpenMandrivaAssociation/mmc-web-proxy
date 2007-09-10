@@ -1,23 +1,25 @@
+%define snap r39
+
 %define _requires_exceptions pear(graph\\|pear(includes\\|pear(modules
 %define _enable_debug_packages %{nil}
 %define debug_package          %{nil}
 
-Summary:	SquidGuard module for the LMC web interface
-Name:		lmc-web-proxy
-Version:	2.0.0
-Release:	%mkrel 2
+Summary:	SquidGuard module for the MMC web interface
+Name:		mmc-web-proxy
+Version:	2.0.1
+Release:	%mkrel 0.%{snap}.1
 License:	GPL
 Group:		System/Servers
 URL:		http://lds.linbox.org/
-Source0:	%{name}-%{version}.tar.gz
-Patch0:		lmc-web-proxy-Makefile_fix.diff
+Source0:	%{name}-%{version}-%{snap}.tar.gz
+Patch0:		mmc-web-proxy-Makefile_fix.diff
 Requires:	squid squidGuard
-Requires:	lmc-web-base
+Requires:	mmc-web-base
 BuildArch:      noarch
 Buildroot:	%{_tmppath}/%{name}-buildroot
 
 %description
-Linbox Management Console web interface designed by Linbox.
+Mandriva Management Console web interface designed by Linbox.
 
 This is the Squid/SquidGuard module.
 
@@ -43,4 +45,4 @@ rm -rf %{buildroot}
 %files
 %defattr(-,root,root,0755)
 %doc COPYING Changelog
-%{_datadir}/lmc/modules/proxy
+%{_datadir}/mmc/modules/proxy
