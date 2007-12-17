@@ -14,7 +14,6 @@ Patch0:		mmc-web-proxy-Makefile_fix.diff
 Requires:	squid squidGuard
 Requires:	mmc-web-base
 BuildArch:      noarch
-Buildroot:	%{_tmppath}/%{name}-buildroot
 
 %description
 Mandriva Management Console web interface designed by Linbox.
