@@ -4,8 +4,8 @@
 
 Summary:	SquidGuard module for the MMC web interface
 Name:		mmc-web-proxy
-Version:	2.3.1
-Release:	%mkrel 2
+Version:	2.3.2
+Release:	%mkrel 1
 License:	GPL
 Group:		System/Servers
 URL:		http://mds.mandriva.org/
@@ -14,7 +14,7 @@ Patch0:		mmc-web-proxy-Makefile_fix.diff
 Requires:	squid squidGuard
 Requires:	mmc-web-base >= 2.3.1
 BuildArch:      noarch
-Buildroot:	%{_tmppath}/%{name}-buildroot
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 Mandriva Management Console web interface designed by Linbox.
